@@ -1,0 +1,117 @@
+package com.Selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Miniproject_Adactin {
+
+	public static void main(String[] args) {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ELCOT\\eclipse-workspace\\selenium___mmmm\\webdriver\\chromedriver.exe");
+		WebDriver a = new ChromeDriver();
+		a.get("https://adactinhotelapp.com/");
+		a.manage().window().maximize();
+		WebElement name = a.findElement(By.xpath("//input[@name='username']"));
+		name.sendKeys("guru0750");
+		WebElement pass =a.findElement(By.xpath("//input[@id='password']"));
+		pass.sendKeys("guru@0750");
+		WebElement login = a.findElement(By.xpath("//input[@value='Login']"));
+		login.click();
+		WebElement loc = a.findElement(By.xpath("//select[@id='location']"));
+		loc.click();
+		Select b= new Select(loc);
+		b.selectByIndex(2);
+		WebElement hotel = a.findElement(By.xpath("//select[@id='hotels']"));
+		hotel.click();
+		Select c= new Select(hotel);
+		c.selectByIndex(2);
+		WebElement room = a.findElement(By.xpath("//select[@id='room_type']"));
+		room.click();
+		Select d=new Select(room);
+		d.selectByIndex(1);
+		WebElement roomno = a.findElement(By.xpath("//select[@id='room_nos']"));
+		roomno.click();
+		Select e=new Select(roomno);
+		e.selectByIndex(3);
+		WebElement datein = a.findElement(By.xpath("//input[@id='datepick_in']"));
+		datein.click();
+		datein.clear();
+		datein.sendKeys("10/10/2023");
+		WebElement dateout = a.findElement(By.xpath("//input[@id='datepick_out']"));
+		dateout.click();
+		dateout.clear();
+		dateout.sendKeys("10/10/2023");
+	WebElement childno = a.findElement(By.xpath("//select[@id='adult_room']"));
+	childno.click();
+	Select f=new Select(childno);
+	f.selectByIndex(3);
+	WebElement child3=a.findElement(By.xpath("//select[@id='child_room']"));
+	 child3.click();
+	Select g=new Select(child3);
+	g.selectByIndex(3);
+	WebElement sel=a.findElement(By.xpath("//input[@id='Submit']"));
+	sel.click();
+	WebElement butt = a.findElement(By.xpath("//input[@id='radiobutton_0']"));
+	butt.click();
+	WebElement cont = a.findElement(By.xpath("//input[@id='continue']"));
+	cont.click();
+	WebElement fname = a.findElement(By.xpath("//input[@name='first_name']"));
+	fname.click();
+	fname.sendKeys("Gurunathan");
+	WebElement lname = a.findElement(By.xpath("//input[@name='last_name']"));
+	lname.click();
+	lname.sendKeys("R");
+	WebElement add = a.findElement(By.xpath("//textarea[@name='address']"));
+	add.click();
+	add.sendKeys("chennai");
+	WebElement ccnum = a.findElement(By.xpath("//input[@name='cc_num']"));
+	ccnum.click();
+	ccnum.sendKeys("1234567890123456");
+	WebElement cctype = a.findElement(By.xpath("//select[@id='cc_type']"));
+	cctype.click();
+	Select h=new Select(cctype);
+	h.selectByIndex(2);
+	WebElement mon = a.findElement(By.xpath("//select[@id='cc_exp_month']"));
+	mon.click();
+	Select i=new Select(mon);
+	i.selectByIndex(7);
+	WebElement year = a.findElement(By.xpath("//select[@name='cc_exp_year']"));
+	year.click();
+	Select j=new Select(year);
+	j.selectByIndex(15);
+	WebElement ccvno = a.findElement(By.xpath("//input[@id='cc_cvv']"));
+	ccvno.click();
+	ccvno.sendKeys("123");
+	WebElement book = a.findElement(By.xpath("//input[@id='book_now']"));
+	book.click();
+
+
+
+
+
+		}
+
+	}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
